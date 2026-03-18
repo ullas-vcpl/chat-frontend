@@ -6,12 +6,15 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';  
+import Loader from './components/loader';
+import { useSelector } from 'react-redux';
 
 function App() {
-
+  const isLoading = useSelector((state) => state.loader);
 
   return (
     <>
+    {isLoading && <Loader />}
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
