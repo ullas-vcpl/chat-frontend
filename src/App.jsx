@@ -7,6 +7,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Contact from './pages/contact';  
 import Loader from './components/loader';
+import Navbar from './components/navbar';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
     {isLoading && <Loader />}
+    <Navbar />
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
