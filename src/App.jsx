@@ -8,6 +8,8 @@ import About from './pages/about';
 import Contact from './pages/contact';  
 import Loader from './components/loader';
 import Navbar from './components/navbar';
+import Login from './pages/login';
+import Signup from './pages/signup';
 import { useSelector } from 'react-redux';
 
 function App() {
@@ -22,6 +24,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
       </Routes>
     </Router>
     </>
